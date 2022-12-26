@@ -1,0 +1,51 @@
+.CalcFrame {
+  display: flex;
+  justify-content: center;
+  padding: 100;
+}
+
+.Calculator {
+  border: 3px solid gray;
+  width: 326;
+}
+
+.Header {
+  text-align: center;
+  color: black;
+  height: 10%;
+
+}
+
+.ToDoList{
+  background-color: #F8F9F9;
+  min-height: 90%;
+  left:10%;
+  border: 2px solid black;
+  padding: 5px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+.FormCurToDo{
+  background-color: #F8F9F9;
+  border: 2px solid black;
+  padding: 5px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+.BottomBar{
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+
+}
