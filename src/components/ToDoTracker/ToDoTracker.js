@@ -39,6 +39,14 @@ const ToDoTracker = () => {
 
   }
 
+  const setToDoUpdate = (newToDo) => {
+    if(!(toDoEdit || toDoNew)){
+      setToDo(newToDo)
+
+    }
+
+  }
+
   return (
     <div>
       <Grid container>
@@ -63,10 +71,11 @@ const ToDoTracker = () => {
               border: 1,
               height: 300,
               width: "auto",
+              padding: 1,
               marginLeft: 1,
             }}
           >
-            <ToDoList list={toDoList} setToDo={setToDo}/>
+            <ToDoList list={toDoList} setToDo={setToDoUpdate}/>
           </Box>
 
         </Grid>
@@ -77,6 +86,7 @@ const ToDoTracker = () => {
               border: 1,
               height: 300,
               width: "auto",
+              padding: 1,
               marginLeft: 1,
               marginRight: 1,
             }}
@@ -101,7 +111,7 @@ const ToDoTracker = () => {
               backgroundColor: "#E5E7E9",
             }}
           >
-              <BottomBar setNew={setToDoNew} setEdit={setToDoEdit} removeToDo={removeToDo} dis={(toDoEdit || toDoNew)}/>
+              <BottomBar setNew={setToDoNew} setEdit={setToDoEdit} removeToDo={removeToDo} disable={(toDoEdit || toDoNew)}/>
           </Box>
 
         </Grid>
