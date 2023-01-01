@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import {Button, Stack} from '@mui/material/';
 
-const Navbar = ({toDo}) => {
+const Navbar = () => {
+  
   return (
     <div>
       <Stack direction="row" spacing={1}>

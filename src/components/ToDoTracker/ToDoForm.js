@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import {TextField, Box, Button ,Stack} from '@mui/material/'
+
 const ToDoForm = ({toDo, edit, setNewEdit, addToDo, editToDo}) => {
   const [ userInputTitle, setUserInputTitle ] = useState(edit? toDo.title : "");
   const [ userInputBody, setUserInputBody ] = useState(edit? toDo.body : "");
@@ -41,29 +43,39 @@ const ToDoForm = ({toDo, edit, setNewEdit, addToDo, editToDo}) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>Title:</label>
-        <br/>
-        <input
-          value={userInputTitle}
-          type="text" name="title"
-          placeholder="Enter title..."
-          onChange={handleTitleChange}/>
-        <br/>
-        <label>Body:</label>
-        <br/>
-        <textarea
-          value={userInputBody}
-          type="text" name="body"
-          placeholder="Enter body..."
-          onChange={handleBodyChange}
-          rows={5}
-          cols={21}
-        />
+      <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+      onSubmit={handleSubmit}
+      >
+        <Stack spacing={2}>
+          <TextField
+            id="outlined-basic"
+            label="Tite"
+            variant="outlined"
+            value={userInputTitle}
+            onChange={handleTitleChange}
+          />
 
-        <br/>
-        <input type="submit" value="Submit" />
-      </form>
+          <TextField
+           id="outlined-multiline-flexible"
+           label="Body"
+           multiline
+           maxRows={4}
+           value={userInputBody}
+           onChange={handleBodyChange}
+          />
+
+        <Button type="Submit" variant="outlined">Submit</Button>
+
+        </Stack>
+
+      </Box>
+
     </div>
 
   );

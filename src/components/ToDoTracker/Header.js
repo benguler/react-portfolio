@@ -1,9 +1,10 @@
 import React from 'react';
+import {Typography} from '@mui/material/';
 
 const Header = () => {
   return (
     <div>
-      <h1>To Do Tracker</h1>
+      <Typography variant="h2">To Do Tracker</Typography>
     </div>
 
   );

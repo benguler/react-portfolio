@@ -1,8 +1,6 @@
 import React from 'react';
 
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import {ListItem, ListItemButton, ListItemText} from '@mui/material/';
 
 const ToDo = ({toDo, setToDo}) => {
   return (

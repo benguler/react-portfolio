@@ -5,7 +5,7 @@ import CurToDo from './CurToDo';
 import ToDoList from './ToDoList';
 import ToDoForm from './ToDoForm';
 
-import Grid from '@mui/material/Grid';
+import {Grid, Box} from '@mui/material/';
 
 import styles from '../../css/styles.module.css';
 
@@ -43,34 +43,66 @@ const ToDoTracker = () => {
     <div>
       <Grid container>
         <Grid item xs={12}>
-          <div className={styles.Header}>
+          <Box
+            sx = {{
+              display:"flex",
+              justifyContent:"center",
+              padding: 1,
+              marginBottom: 1,
+              backgroundColor: "#E5E7E9",
+            }}
+          >
             <Header />
-          </div>
+          </Box>
 
         </Grid>
 
         <Grid item xs={6}>
-          <div className={styles.ToDoList}>
+          <Box
+            sx = {{
+              border: 1,
+              height: 300,
+              width: "auto",
+              marginLeft: 1,
+            }}
+          >
             <ToDoList list={toDoList} setToDo={setToDo}/>
-          </div>
+          </Box>
 
         </Grid>
 
         <Grid item xs={6}>
-          <div className={styles.FormCurToDo}>
+          <Box
+            sx = {{
+              border: 1,
+              height: 300,
+              width: "auto",
+              marginLeft: 1,
+              marginRight: 1,
+            }}
+          >
             {(toDoEdit || toDoNew) ?
               <ToDoForm toDo={toDo} edit={toDoEdit} setNewEdit={toDoEdit? setToDoEdit : setToDoNew} addToDo={addToDo} editToDo={editToDo}/>
               :
               <CurToDo toDo={toDo}/>
             }
-          </div>
+          </Box>
 
         </Grid>
 
         <Grid item xs={12}>
-          <div className={styles.BottomBar}>
+          <Box
+            sx = {{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: 1,
+              marginTop: 1,
+              backgroundColor: "#E5E7E9",
+            }}
+          >
               <BottomBar setNew={setToDoNew} setEdit={setToDoEdit} removeToDo={removeToDo} dis={(toDoEdit || toDoNew)}/>
-          </div>
+          </Box>
 
         </Grid>
 

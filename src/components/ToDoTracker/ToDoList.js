@@ -1,17 +1,13 @@
 import React from 'react';
 import ToDo from './ToDo';
 
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import {List, ListItem, ListItemButton, ListItemText} from '@mui/material/';
 
 const ToDoList = ({list, setToDo}) => {
   return (
     <div>
       <List
         sx={{
-        paddingLeft: "50px",
         bgcolor: 'background.paper',
         position: 'relative',
         overflow: 'auto',

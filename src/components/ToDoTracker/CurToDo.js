@@ -1,10 +1,11 @@
 import React from 'react';
+import {Typography} from '@mui/material/';
 
 const CurToDo = ({toDo}) => {
   return (
     <div>
-      <h4>{toDo.title}</h4>
-      <p>{toDo.body}</p>
+      <Typography variant="h5">{toDo.title}</Typography>
+      <Typography variant="body1">{toDo.body}</Typography>
     </div>
 
   );
