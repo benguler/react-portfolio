@@ -80,7 +80,7 @@ const Calculator = () =>{
   }
 
   const handleEq = () => {
-    var value = 0;
+    let value = 0;
 
     switch(op){
       case '+': value = prev+term;

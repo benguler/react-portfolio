@@ -65,12 +65,14 @@ const ToDoForm = ({toDo, edit, setNewEdit, addToDo, editToDo}) => {
            id="outlined-multiline-flexible"
            label="Body"
            multiline
-           maxRows={4}
+           maxRows={3}
            value={userInputBody}
            onChange={handleBodyChange}
           />
 
-        <Button type="Submit" variant="outlined">Submit</Button>
+
+          <Button type="Submit" variant="outlined">Submit</Button>
+
 
         </Stack>
 
