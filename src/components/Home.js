@@ -35,9 +35,44 @@ const Home = () => {
           textAlign: "left",
         }}
       >
-        <Typography variant="h5">
+        <Typography variant="h4">
           Page List
         </Typography>
+
+
+              <Box
+                sx={{
+                  width: 700,
+                  marginTop: 2,
+                  textAlign: "justify",
+                }}
+              >
+                <Typography variant="h5">
+                  Calculator
+                </Typography>
+
+                <Typography variant="body1">
+                A simple Calculator widget styled with bootstrap.
+                </Typography>
+
+              </Box>
+
+              <Box
+                sx={{
+                  width: 700,
+                  marginTop: 2,
+                  textAlign: "justify",
+                }}
+              >
+                <Typography variant="h5">
+                  ToDo Tracker
+                </Typography>
+
+                <Typography variant="body1">
+                A tracker for tasks. Allows user to add, edit, and delete tasks. Styled with Material UI.
+                </Typography>
+
+              </Box>
 
       </Box>
 
