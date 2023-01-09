@@ -10,6 +10,8 @@ import {Typography, Box} from '@mui/material/';
 
 const App =()=>{
   const[selectedVideo, setSelectedVideo] = useState(null);
+  const[displayCount, setDisplayCount] = useState(5);
+
   const[videos, search] = useVideos('react javascript');
 
   useEffect(() => {
@@ -18,10 +20,10 @@ const App =()=>{
 
   return(
     <Box>
-      <SearchBar onFormSubmit={search} />
+      <SearchBar onFormSubmit={search} setDisplayCount={setDisplayCount}/>
       <VideoDetail video={selectedVideo} />
-      <VideoList onVideoSelect={(video) => setSelectedVideo(video)} videos={videos} />
-      <LoadMore />
+      <VideoList onVideoSelect={(video) => setSelectedVideo(video)} videos={videos.slice(0, displayCount)}/>
+      <LoadMore displayCount={displayCount} setDisplayCount={setDisplayCount}/>
     </Box>
 
   );

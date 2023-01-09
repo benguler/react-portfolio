@@ -2,11 +2,13 @@ import  React, {useState} from 'react';
 
 import {TextField, Box} from '@mui/material/'
 
-const SearchBar = ({onFormSubmit}) => {
+const SearchBar = ({onFormSubmit, setDisplayCount}) => {
   const [term, setTerm] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setDisplayCount(5);
 
     onFormSubmit(term);
 
