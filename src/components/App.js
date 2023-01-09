@@ -5,13 +5,15 @@ import Home from './Home'
 import RouteDrawer from './RouteDrawer'
 import Calculator from './Calculator/Calculator';
 import ToDoTracker from './ToDoTracker/ToDoTracker';
+import Videos from './Videos/components/Videos';
 import Navbar from './Navbar';
 
 const App = () => {
   const links=[
               {key: 1, name:"Home" , path:"/", element:<Home/>},
               {key: 2, name:"Calculator" , path:"/calculator", element:<Calculator/>},
-              {key: 3, name:"ToDoTracker" , path:"/todotracker", element:<ToDoTracker/>}
+              {key: 3, name:"ToDoTracker" , path:"/todotracker", element:<ToDoTracker/>},
+              {key: 3, name:"Videos" , path:"/videos", element:<Videos/>},
             ];
 
   return(

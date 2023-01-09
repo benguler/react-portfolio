@@ -59,6 +59,7 @@ const ToDoForm = ({toDo, edit, setNewEdit, addToDo, editToDo}) => {
             variant="outlined"
             value={userInputTitle}
             onChange={handleTitleChange}
+            inputProps={{ maxLength: 48}}
           />
 
           <TextField
@@ -68,6 +69,7 @@ const ToDoForm = ({toDo, edit, setNewEdit, addToDo, editToDo}) => {
            maxRows={3}
            value={userInputBody}
            onChange={handleBodyChange}
+           inputProps={{ maxLength: 280}}
           />
 
 

@@ -24,7 +24,13 @@ const RouteDrawer = ({links}) => {
     <div>
       <div className={styles.PagesButton}>
         <IconButton aria-label="Select Page" onClick={() => {toggleDrawerStatus()}}>
-          <MenuBookOutlinedIcon color="primary" sx={{ fontSize: 70 }}/>
+          <MenuBookOutlinedIcon
+            color="primary"
+            sx={{
+              fontSize: 70,
+            }}
+          />
+
         </IconButton>
       </div>
       <Divider/>
