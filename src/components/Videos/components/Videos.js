@@ -12,7 +12,7 @@ const App =()=>{
   const[selectedVideo, setSelectedVideo] = useState(null);
   const[displayCount, setDisplayCount] = useState(5);
 
-  const[videos, search] = useVideos('react javascript');
+  const[videos, search] = useVideos('');
 
   useEffect(() => {
     setSelectedVideo(videos[0]);
