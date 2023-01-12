@@ -7,7 +7,17 @@ const VideoList = ({videos, onVideoSelect}) => {
   let count = 0;
 
   const renderedList = videos.map((video) => {
-    return <VideoItem key={video.id.videoId} onVideoSelect={onVideoSelect} video = {video}/>
+    return(
+      <Box
+        sx={{
+          marginTop: 3,
+          padding: 1,
+          backgroundColor:"#F2F3F4",
+        }}
+        >
+        <VideoItem key={video.id.videoId} onVideoSelect={onVideoSelect} video = {video}/>
+      </Box>
+    );
 
   });
 

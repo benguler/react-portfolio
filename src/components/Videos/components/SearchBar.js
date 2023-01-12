@@ -33,6 +33,7 @@ const SearchBar = ({onFormSubmit, setDisplayCount}) => {
           variant="outlined"
           value={term}
           onChange={handleSearchChange}
+          fullWidth
         />
 
       </Box>

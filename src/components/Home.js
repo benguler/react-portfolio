@@ -51,7 +51,7 @@ const Home = () => {
                 </Typography>
 
                 <Typography variant="body1">
-                A simple Calculator widget styled with bootstrap.
+                A simple Calculator widget. Styled with bootstrap.
                 </Typography>
 
               </Box>

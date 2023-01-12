@@ -3,14 +3,6 @@ import React from 'react';
 import {Typography, Box} from '@mui/material/';
 
 const VideoDetail = ({video}) => {
-  const styles = {
-    videoItem: {
-      display: "flex !important",
-      alignItems: "center !important",
-      cursor: "pointer",
-    }
-
-  };
 
   if(!video){
       return <div>Loading...</div>;
@@ -20,9 +12,18 @@ const VideoDetail = ({video}) => {
 
   return(
     <Box>
-    <iframe title={styles.videoItem} src={videoSrc} />
-    <Typography variant="h5">{video.snippet.title}</Typography>
-    <Typography variant="body1">{video.snippet.description}</Typography>
+      <iframe title="video" src={videoSrc} height="480" width="854"/>
+      <Box
+        sx={{
+          backgroundColor:"#F2F3F4",
+          padding: 1,
+          width: 854
+        }}
+      >
+        <Typography variant="h5">{video.snippet.title}</Typography>
+        <Typography variant="body1">{video.snippet.description}</Typography>
+      </Box>
+
     </Box>
 
   );

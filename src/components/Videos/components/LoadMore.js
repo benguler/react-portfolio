@@ -10,7 +10,7 @@ const LoadMore = ({video, onVideoSelect, displayCount, setDisplayCount}) => {
 
   return(
     <Box>
-      <Button variant="outlined" disabled={displayCount >= 50} onClick={loadMore}>Load More</Button>
+      <Button variant="outlined" disabled={displayCount >= 50} onClick={loadMore} fullWidth>Load More</Button>
     </Box>
   );
 
