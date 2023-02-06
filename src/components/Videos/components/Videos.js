@@ -24,8 +24,8 @@ const App =()=>{
         marginLeft: 5,
       }}
     >
-      <Grid container>
-        <Grid item xs={6} md={6}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={12} lg={12} wrap="wrap">
           <Box
             sx={{
               width:500,
@@ -45,25 +45,32 @@ const App =()=>{
 
         </Grid>
 
-        <Grid item xs={6} md={6}>
-
+        <Grid item xs={12} md={12} lg={12} wrap="wrap">
           <Box
             sx={{
-              marginTop: 28,
+              marginTop: 2,
               width:330,
             }}
           >
-            <VideoList onVideoSelect={(video) => setSelectedVideo(video)} videos={videos.slice(0, displayCount)}/>
-          </Box>
+            <Box
+              sx={{
 
-          <Box
-            sx={{
-              marginTop: 3,
-              marginBottom: 3,
-              width:330,
-            }}
-          >
-            <LoadMore displayCount={displayCount} setDisplayCount={setDisplayCount}/>
+              }}
+            >
+              <VideoList onVideoSelect={(video) => setSelectedVideo(video)} videos={videos.slice(0, displayCount)}/>
+
+            </Box>
+
+            <Box
+              sx={{
+                marginTop: 3,
+                marginBottom: 3,
+              }}
+            >
+              <LoadMore displayCount={displayCount} setDisplayCount={setDisplayCount}/>
+
+            </Box>
+
           </Box>
 
         </Grid>
