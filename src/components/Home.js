@@ -85,7 +85,24 @@ const Home = () => {
                 </Typography>
 
                 <Typography variant="body1">
-                A application that allows users to search youtube videos. Uses the youtube api and styled with material ui.
+                An application that allows users to search youtube videos. Uses the youtube api and styled with material ui.
+                </Typography>
+
+              </Box>
+
+              <Box
+                sx={{
+                  width: 700,
+                  marginTop: 2,
+                  textAlign: "justify",
+                }}
+              >
+                <Typography variant="h5">
+                  WikiSearch
+                </Typography>
+
+                <Typography variant="body1">
+                A application that allows users to search wikipedia articles. Uses the wikipedia api and styled with material ui.
                 </Typography>
 
               </Box>

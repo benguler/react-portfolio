@@ -29,7 +29,7 @@ const SearchBar = ({onFormSubmit, setDisplayCount}) => {
       >
         <TextField
           id="outlined-basic"
-          label="Video Search"
+          label=""
           variant="outlined"
           value={term}
           onChange={handleSearchChange}

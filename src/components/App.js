@@ -6,6 +6,7 @@ import RouteDrawer from './RouteDrawer'
 import Calculator from './Calculator/Calculator';
 import ToDoTracker from './ToDoTracker/ToDoTracker';
 import Videos from './Videos/components/Videos';
+import WikiSearch from './WikiSearch/components/WikiSearch'
 import Navbar from './Navbar';
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
               {key: 1, name:"Home" , path:"/", element:<Home/>},
               {key: 2, name:"Calculator" , path:"/calculator", element:<Calculator/>},
               {key: 3, name:"ToDoTracker" , path:"/todotracker", element:<ToDoTracker/>},
-              {key: 3, name:"Videos" , path:"/videos", element:<Videos/>},
+              {key: 4, name:"Videos" , path:"/videos", element:<Videos/>},
+              {key: 5, name:"WikiSearch" , path:"/wikisearch", element:<WikiSearch/>},
             ];
 
   return(
