@@ -19,7 +19,7 @@ const WikiSearch = () => {
       }}
 
     >
-      <Typography variant="h5">Wiki-Search</Typography>
+      <Typography variant="h2">Wiki-Search</Typography>
       <Search term={term} setTerm={setTerm} setResults={setResults}/>
       <Snippets results={results} setOpen={setOpen} setCurResult={setCurResult}/>
       <Article open={open} setOpen={setOpen} curResult={curResult}/>
