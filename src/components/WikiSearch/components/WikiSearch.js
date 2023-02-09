@@ -12,8 +12,14 @@ const WikiSearch = () => {
   const [curResult, setCurResult] = useState(null);
 
   return(
-    <Box>
-      <Typography variant="h4">Wiki-Search</Typography>
+    <Box
+      sx={{
+        marginLeft: 5,
+
+      }}
+
+    >
+      <Typography variant="h5">Wiki-Search</Typography>
       <Search term={term} setTerm={setTerm} setResults={setResults}/>
       <Snippets results={results} setOpen={setOpen} setCurResult={setCurResult}/>
       <Article open={open} setOpen={setOpen} curResult={curResult}/>
