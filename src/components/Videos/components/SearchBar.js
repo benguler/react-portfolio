@@ -8,6 +8,7 @@ const SearchBar = ({onFormSubmit, setDisplayCount}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    //Reset display count
     setDisplayCount(5);
 
     onFormSubmit(term);

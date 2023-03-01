@@ -9,6 +9,7 @@ const useVideos = (defaultSearchTerm) => {
 
   }, []);
 
+  //Get list of videos based on search term using youtube api
   const search = async (term) => {
     const response = await youtube.get('/search', {
       params: {

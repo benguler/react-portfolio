@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from './Home'
 import RouteDrawer from './RouteDrawer'
-import Calculator from './Calculator/Calculator';
-import ToDoTracker from './ToDoTracker/ToDoTracker';
+import Calculator from './Calculator/components/Calculator';
+import ToDoTracker from './ToDoTracker/components/ToDoTracker';
 import Videos from './Videos/components/Videos';
 import WikiSearch from './WikiSearch/components/WikiSearch'
+import Poster from './Poster/components/Poster'
 import Navbar from './Navbar';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
               {key: 3, name:"ToDoTracker" , path:"/todotracker", element:<ToDoTracker/>},
               {key: 4, name:"Videos" , path:"/videos", element:<Videos/>},
               {key: 5, name:"WikiSearch" , path:"/wikisearch", element:<WikiSearch/>},
+              {key: 6, name:"Poster" , path:"/poster", element:<Poster/>},
             ];
 
   return(

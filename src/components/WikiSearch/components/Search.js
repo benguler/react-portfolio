@@ -13,6 +13,7 @@ const Search = ({term, setTerm, setResults}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    //Get list of articles based on  search term with wikipedia API
     const {data} = await axios.get('https://en.wikipedia.org/w/api.php', {
         params:{
           action: 'query',

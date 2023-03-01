@@ -1,0 +1,10 @@
+.CalcFrame {
+  display: flex;
+  justify-content: center;
+  padding: 100;
+}
+
+.Calculator {
+  border: 3px solid gray;
+  width: 326;
+}

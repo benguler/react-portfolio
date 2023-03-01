@@ -14,6 +14,7 @@ const App =()=>{
 
   const[videos, search] = useVideos('');
 
+  //Update new list of viedos when new search term is entered
   useEffect(() => {
     setSelectedVideo(videos[0]);
   }, [videos]);

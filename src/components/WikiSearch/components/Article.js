@@ -4,7 +4,6 @@ import {Dialog, DialogTitle, DialogContent, Typography} from '@mui/material/';
 const Article = ({open, curResult, setOpen}) => {
 
   const [contents, setContents] = useState([]);
-  const [error, setError] = useState();
 
   const articleTitle = (curResult == null)? "Article Title" : curResult.title;
 
@@ -18,6 +17,7 @@ const Article = ({open, curResult, setOpen}) => {
 
   };
 
+  //Get contnets of article based on url
   const getContents = async () => {
     let resp;
     let contents = [];
@@ -26,13 +26,16 @@ const Article = ({open, curResult, setOpen}) => {
       resp = await fetch(url);
       const json = await resp.json();
       contents = extractAPIContents(json);
-    } catch (err) {
-      setError(err);
+
+    } catch(err) {
+      console.log("Error with search")
+
     }
 
     setContents(contents);
   };
 
+  //Change the article contents whenver curResult is updated
   useEffect(() => {
     getContents();
   }, [curResult]);
