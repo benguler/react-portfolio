@@ -102,7 +102,7 @@ const Home = () => {
                 </Typography>
 
                 <Typography variant="body1">
-                A application that allows users to search wikipedia articles. Uses the wikipedia api and styled with material ui.
+                An application that allows users to search wikipedia articles. Uses the wikipedia api and styled with material ui.
                 </Typography>
 
               </Box>
@@ -115,11 +115,11 @@ const Home = () => {
                 }}
               >
                 <Typography variant="h5">
-                  WikiSearch
+                  Poster
                 </Typography>
 
                 <Typography variant="body1">
-                A application that allows users to search wikipedia articles. Uses the wikipedia api and styled with material ui.
+                An application that allows users to make posts on a static page. Built with react-rdux and styled with material ui.
                 </Typography>
 
               </Box>
