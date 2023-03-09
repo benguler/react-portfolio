@@ -115,11 +115,11 @@ const Home = () => {
                 }}
               >
                 <Typography variant="h5">
-                  Poster
+                  Poster (WIP)
                 </Typography>
 
                 <Typography variant="body1">
-                An application that allows users to make posts on a static page. Built with react-rdux and styled with material ui.
+                An application that allows users to make posts on a static page. User cna create either text posts, viedo posts, or link posts. Manages state with react-redux and styled with material ui.
                 </Typography>
 
               </Box>
