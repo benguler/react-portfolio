@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react';
-
 import {Typography, Box, Button ,Stack, TextField} from '@mui/material/';
-
 import {useDispatch} from 'react-redux';
 
 const PostForm = () => {
 
   const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
+  const [url, setURL] = useState("");
   const [body, setBody] = useState("");
 
   const dispatch = useDispatch();
@@ -16,14 +14,13 @@ const PostForm = () => {
     e.preventDefault();
 
     dispatch({
-      type: "NEW_POST",
+      type: "NEW_TEXT_POST",
 
       payload:{
         title: title,
-        author: author,
         body: body,
       }
-    })
+    });
 
   }
 
@@ -45,16 +42,6 @@ const PostForm = () => {
         inputProps={{ maxLength: 48}}
         value = {title}
         onChange = {(e) => {setTitle(e.currentTarget.value)}}
-      />
-      <br/>
-
-      <TextField
-        id="outlined-basic"
-        label=""
-        variant="outlined"
-        inputProps={{ maxLength: 48}}
-        value = {author}
-        onChange = {(e) => {setAuthor(e.currentTarget.value)}}
       />
       <br/>
 

@@ -1,10 +1,7 @@
 import React, {useState, useEffect} from 'react';
-
-import Post from './Post';
-
-import {Typography, Box, Button ,Stack} from '@mui/material/';
-
+import PostLink from './PostLink';
 import {useSelector} from 'react-redux';
+import {Typography, Box, Button ,Stack} from '@mui/material/';
 
 const PostList = () => {
 
@@ -13,7 +10,7 @@ const PostList = () => {
   return(
     <div>
       {posts.posts.map((post) => {
-        return (<Post postContent={post}/>);
+        return (<PostLink postContent={post}/>);
       })}
     </div>
 

@@ -28,7 +28,7 @@ const Article = ({open, curResult, setOpen}) => {
       contents = extractAPIContents(json);
 
     } catch(err) {
-      console.log("Error with search")
+      console.log("Error with search");
 
     }
 

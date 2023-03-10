@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PostForm from './PostForm';
 import PostList from './PostList';
-
+import Post from './Post';
 import {Typography, Box, Button ,Stack} from '@mui/material/';
 
 const Poster = () => {
@@ -13,9 +13,9 @@ const Poster = () => {
       }}
 
     >
-    
-    <PostForm />
-    <PostList />
+      <PostForm />
+      <PostList />
+      <Post />
 
     </Box>
 
