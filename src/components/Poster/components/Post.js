@@ -24,14 +24,41 @@ const Post = ({}) =>{
 
   }
 
+    const textOrVideo = () => {
+      switch(posts.posts[(posts.curPostId-1)].type){
+        case "TEXT":
+          return(
+            <div>
+              <Typography>{posts.posts[(posts.curPostId-1)].body}</Typography>
+            </div>
+
+          );
+
+        case "VIDEO":
+          return(
+            <div>
+              <iframe title="video" src={posts.posts[(posts.curPostId-1)].url} height="480" width="854" />
+            </div>
+
+          );
+
+        default:
+          return(
+            <div></div>
+
+          );
+
+      }
+
+    }
+
   if(posts.curPostId!=0){
     return(
       <Dialog open={posts.open} onClose={()=>{closeDialog()}}>
-        <DialogTitle><Typography variant="h4">{}</Typography></DialogTitle>
-          <Typography>{posts.posts[(posts.curPostId-1)].title}</Typography>
-          <Typography>{posts.posts[(posts.curPostId-1)].body}</Typography>
-        <DialogContent>
+        <DialogTitle><Typography variant="h4">{posts.posts[(posts.curPostId-1)].title}</Typography></DialogTitle>
 
+        <DialogContent>
+          {textOrVideo()}
         </DialogContent>
 
       </Dialog>

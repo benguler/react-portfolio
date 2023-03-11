@@ -7,6 +7,26 @@ const initialState = {
 
 }
 
+const cleanURL = (url) =>{
+  let newUrl = "https://www.youtube.com/embed/";
+
+    let j = 0;
+
+    for(let i = 0; i < url.length; i++){
+      if(url.charAt(i) == "="){
+        j = i;
+        break;
+
+      }
+
+    }
+
+    newUrl+=url.substring(j+1);
+
+    return newUrl;
+
+}
+
 const postReducer = (state = initialState, action) => {
   switch(action.type) {
     case "NEW_TEXT_POST":
@@ -28,7 +48,7 @@ const postReducer = (state = initialState, action) => {
           ...state,
           posts: [
                   ...state.posts,
-                  {type: "VIDEO", id: postId, title: action.payload.title, url: action.payload.url,},
+                  {type: "VIDEO", id: postId, title: action.payload.title, url: cleanURL(action.payload.url),},
                 ],
 
         }

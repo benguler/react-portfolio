@@ -13,6 +13,7 @@ const Poster = () => {
       }}
 
     >
+      <Typography variant="h1">POSTER</Typography>
       <PostForm />
       <PostList />
       <Post />
