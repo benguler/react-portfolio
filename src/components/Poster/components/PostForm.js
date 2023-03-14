@@ -23,6 +23,10 @@ const PostForm = () => {
         newVideoPost();
         break;
 
+      case "LINK":
+        newLinkPost();
+        break;
+
       default:
         break;
 
@@ -46,6 +50,19 @@ const PostForm = () => {
   const newVideoPost = () => {
     dispatch({
       type: "NEW_VIDEO_POST",
+
+      payload:{
+        title: title,
+        url: url,
+      }
+
+    });
+
+  }
+
+  const newLinkPost = () => {
+    dispatch({
+      type: "NEW_LINK_POST",
 
       payload:{
         title: title,
@@ -80,17 +97,28 @@ const PostForm = () => {
            multiline
            maxRows={3}
            inputProps={{ maxLength: 280}}
-           value = {body}
+           value = {url}
+           onChange = {(e) => {setUrl(e.currentTarget.value)}}
+          />
+
+        );
+
+      case "LINK":
+        return(
+          <TextField
+           id="outlined-multiline-flexible"
+           label=""
+           multiline
+           maxRows={3}
+           inputProps={{ maxLength: 280}}
+           value = {url}
            onChange = {(e) => {setUrl(e.currentTarget.value)}}
           />
 
         );
 
       default:
-        return(
-          <div></div>
-
-        );
+        return(<div></div>);
 
     }
 
@@ -116,6 +144,7 @@ const PostForm = () => {
         >
           <FormControlLabel value="TEXT" control={<Radio />} label="Text" />
           <FormControlLabel value="VIDEO" control={<Radio />} label="Video" />
+          <FormControlLabel value="LINK" control={<Radio />} label="Link" />
         </RadioGroup>
 
         <TextField
@@ -126,7 +155,9 @@ const PostForm = () => {
           value = {title}
           onChange = {(e) => {setTitle(e.currentTarget.value)}}
         />
+
         <br/>
+
         {bodyOrUrl()}
 
         <br/>

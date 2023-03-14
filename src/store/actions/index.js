@@ -38,6 +38,23 @@ export const newVideoPost = (title, url) => {
 
 }
 
+export const newLinkPost = (title, url) => {
+
+  return(dispatch){
+    dispatch({
+      type: NEW_VIDEO_POST,
+
+      payload:{
+        title: title,
+        url: url,
+      },
+
+    });
+
+  }
+
+}
+
 export const setPostId = (newId) => {
 
   return(dispatch){

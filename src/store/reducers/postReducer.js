@@ -53,6 +53,18 @@ const postReducer = (state = initialState, action) => {
 
         }
 
+        case "NEW_LINK_POST":
+          postId += 1;
+
+          return {
+            ...state,
+            posts: [
+                    ...state.posts,
+                    {type: "LINK", id: postId, title: action.payload.title, url: action.payload.url,},
+                  ],
+
+          }
+
         case "SET_POST_ID":
           return {
             ...state,

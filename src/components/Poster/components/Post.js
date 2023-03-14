@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Dialog, DialogTitle, DialogContent, Typography} from '@mui/material/';
+import {Dialog, DialogTitle, DialogContent, Typography, Link} from '@mui/material/';
 import {useSelector, useDispatch} from 'react-redux';
 
 const Post = ({}) =>{
@@ -41,6 +41,14 @@ const Post = ({}) =>{
             </div>
 
           );
+
+          case "LINK":
+            return(
+              <div>
+                <Link href={posts.posts[(posts.curPostId-1)].url}>{posts.posts[(posts.curPostId-1)].url}</Link>
+              </div>
+
+            );
 
         default:
           return(
